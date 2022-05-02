@@ -32,6 +32,10 @@ exports.text_16 = [{
         text: "Anmelden"
     }, 
     { order: 10, text:"Bitte benutze das Lateinische Alphabet"},
+    { order: 11, text:"Vielen Dank für ihre Anmledung!"},
+    { order: 12, text:"Als bestätigung, erhalten Sie bald eine bestätigungs E-Mail"},
+
+
 ],
     uk: [{
         order: 0,
@@ -66,6 +70,9 @@ exports.text_16 = [{
         text: "Реєстрація"
     }, 
     { order: 10, text: 'Будь ласка, використовуйте латинський алфавіт' },
+    { order: 11, text:"Дякуємо за реєстрацію!"},
+    { order: 12, text:"Як підтвердження, ви незабаром отримаєте електронний лист із підтвердженням"},
+
 ]
 
 
@@ -104,6 +111,9 @@ exports.text_18 = [{
         order: 9,
         text: "Anmelden"
     },     { order: 10, text:"Bitte benutze das Lateinische Alphabet"},
+    { order: 11, text:"Vielen Dank für ihre Anmledung!"},
+    { order: 12, text:"Als bestätigung, erhalten Sie bald eine bestätigungs E-Mail"},
+
 ],
     uk: [{
         order: 0,
@@ -138,6 +148,9 @@ exports.text_18 = [{
         text: "Реєстрація"
     },  
     { order: 10, text: 'Будь ласка, використовуйте латинський алфавіт' },
+    { order: 11, text:"Дякуємо за реєстрацію!"},
+    { order: 12, text:"Як підтвердження, ви незабаром отримаєте електронний лист із підтвердженням"},
+
 ]
 
 }]
