@@ -14,7 +14,8 @@ router.get('/form', function(req, res, next) {
   if (!lang_array.includes(lang)) return res.redirect("/18");
   return res.render("form", {
     text: text_18[0][lang],
-    pre: "/18"
+    pre: "/18",
+    pre_n: "18",
   });
 
 });

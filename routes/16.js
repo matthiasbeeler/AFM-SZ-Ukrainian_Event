@@ -27,6 +27,8 @@ router.get('/form', function (req, res, next) {
     return res.render("form", {
         text: text_16[0][lang],
         pre: "/16",
+        pre_n: "16",
+
     });
 });
 

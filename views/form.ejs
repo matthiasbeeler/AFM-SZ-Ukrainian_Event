@@ -155,7 +155,7 @@
             data: $('form').serializeArray(),
             success: function (data) {
                 if (data.success == true) {
-                    window.location = `/success${lang_url}&num=<%-pre%>`;
+                    window.location = `/success${lang_url}&num=<%-pre_n%>`;
                 } else {
                     if (data.error == "pers") {
                         console.log("pers")
