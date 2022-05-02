@@ -1,11 +1,50 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essen für Alle</title>
+  <link rel="shortcut icon" href="https://www.sz.ch/public/upload/assets/394/favicon.ico?fp=1477047822554" type="image/x-icon" /> 
+  <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+
+<body>
+  <center>
+    <div class="content">
+      <br>
+      <div class="title title-gray">
+        <h1>Einladung zum Informations- und Austauschanlass</h1>
+        <h2><%-date_time%></h2>
+      </div>
+      <div class="title-q">
+        <h1>Welche Sprache sprechen Sie?</h1>
+      </div>
+
+      <div class="flex">
+        <div class="flag_btn" onclick="window.location = '<%-pre%>/form?lang=uk'">
+          <img src="https://wallpapercave.com/wp/wp3867060.jpg" class="flag_btn_img">
+          <h2>український</h2>
+        </div>
+        <div class="flag_btn" onclick="window.location = '<%-pre%>/form?lang=en'">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpreview.redd.it%2F68cdrlhal0hz.png%3Fauto%3Dwebp%26s%3Da7e6c8f70065646b72d45fc6ba12c6bb9bf56923&f=1&nofb=1"
+            class="flag_btn_img">
+          <h2>English</h2>
+        </div>
+        
+        <div class="flag_btn" onclick="window.location = '<%-pre%>/form?lang=de'">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F409%2F287%2Foriginal%2Fillustration-of-german-flag-vector.jpg&f=1&nofb=1"
+            class="flag_btn_img">
+          <h2>Deutsch</h2>
+        </div>
+        
+      </div>
+    </div>
+
+    </div>
+  </center>
+</body>
+
 </html>

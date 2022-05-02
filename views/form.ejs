@@ -1,0 +1,159 @@
+<html lang="en" class="theme-light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einladung zum Informations- und Austauschanlass</title>
+    <link rel="shortcut icon" href="https://www.sz.ch/public/upload/assets/394/favicon.ico?fp=1477047822554" type="image/x-icon" /> 
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <div class="content">
+            <h3 class="back"><a href="<%-pre%>"><%-text[8].text%></a></h3>
+            <br>
+            <div class="title">
+                <h1><%-text[0].text%></h1>
+                <h2><%-text[1].text%></h2>
+                <h2><strong><%-text[10].text%></strong></h2>
+
+            </div>
+            <form action="" method="post">
+                <input type="text" name="last_name" id=" " placeholder="<%-text[2].text%>" required=""
+                    oninvalid=" $(this).css('border', '2px solid red');">
+                <input type="text" name="first_name" id=" " placeholder="<%-text[3].text%>"
+                    required="" oninvalid=" $(this).css('border', '2px solid red');">
+                <input type="number" name="people" id=" " placeholder="<%-text[6].text%>" required=""
+                    oninvalid=" $(this).css('border', '2px solid red');">
+                    <input type="email" name="email" class="email" id=" "
+                    placeholder="<%-text[4].text%>" required="">
+                <input type="text" name="house" onChange="validte(this)" class="house" id=" "
+                    placeholder="<%-text[5].text%>" required="" list="plz">
+                <p class="house_p"><%-text[7].text%></p>
+                
+                <input type="submit" class="delete big btn_nodata sub" value="<%-text[9].text%>" name="search">
+                <datalist id="plz">
+                    <option value="6402 - Merlischachen - Schwyz">
+                    <option value="6403 - Küssnacht am Rigi - Schwyz">
+                    <option value="6405 - Immensee - Schwyz">
+                    <option value="6410 - Rigi Klösterli - Schwyz">
+                    <option value="6410 - Rigi Staffel - Schwyz">
+                    <option value="6410 - Rigi Kulm - Schwyz">
+                    <option value="6410 - Rigi Scheidegg - Schwyz">
+                    <option value="6410 - Goldau - Schwyz">
+                    <option value="6414 - Oberarth - Schwyz">
+                    <option value="6415 - Arth - Schwyz">
+                    <option value="6416 - Steinerberg - Schwyz">
+                    <option value="6417 - Sattel - Schwyz">
+                    <option value="6418 - Rothenthurm - Schwyz">
+                    <option value="6422 - Steinen - Schwyz">
+                    <option value="6423 - Seewen SZ - Schwyz">
+                    <option value="6424 - Lauerz - Schwyz">
+                    <option value="6430 - Schwyz - Schwyz">
+                    <option value="6432 - Rickenbach b. Schwyz - Schwyz">
+                    <option value="6433 - Stoos SZ - Schwyz">
+                    <option value="6434 - Illgau - Schwyz">
+                    <option value="6436 - Ried (Muotathal) - Schwyz">
+                    <option value="6436 - Bisisthal - Schwyz">
+                    <option value="6436 - Muotathal - Schwyz">
+                    <option value="6438 - Ibach - Schwyz">
+                    <option value="6440 - Brunnen - Schwyz">
+                    <option value="6442 - Gersau - Schwyz">
+                    <option value="6443 - Morschach - Schwyz">
+                    <option value="6452 - Riemenstalden - Schwyz">
+                    <option value="8640 - Hurden - Schwyz">
+                    <option value="8806 - Bäch SZ - Schwyz">
+                    <option value="8807 - Freienbach - Schwyz">
+                    <option value="8808 - Pfäffikon SZ - Schwyz">
+                    <option value="8832 - Wilen b. Wollerau - Schwyz">
+                    <option value="8832 - Wollerau - Schwyz">
+                    <option value="8834 - Schindellegi - Schwyz">
+                    <option value="8835 - Feusisberg - Schwyz">
+                    <option value="8836 - Bennau - Schwyz">
+                    <option value="8840 - Trachslau - Schwyz">
+                    <option value="8840 - Einsiedeln - Schwyz">
+                    <option value="8841 - Gross - Schwyz">
+                    <option value="8842 - Unteriberg - Schwyz">
+                    <option value="8843 - Oberiberg - Schwyz">
+                    <option value="8844 - Euthal - Schwyz">
+                    <option value="8845 - Studen SZ - Schwyz">
+                    <option value="8846 - Willerzell - Schwyz">
+                    <option value="8847 - Egg SZ - Schwyz">
+                    <option value="8849 - Alpthal - Schwyz">
+                    <option value="8852 - Altendorf - Schwyz">
+                    <option value="8853 - Lachen SZ - Schwyz">
+                    <option value="8854 - Siebnen - Schwyz">
+                    <option value="8854 - Galgenen - Schwyz">
+                    <option value="8855 - Wangen SZ - Schwyz">
+                    <option value="8856 - Tuggen - Schwyz">
+                    <option value="8857 - Vorderthal - Schwyz">
+                    <option value="8858 - Innerthal - Schwyz">
+                    <option value="8862 - Schübelbach - Schwyz">
+                    <option value="8863 - Buttikon SZ - Schwyz">
+                    <option value="8864 - Reichenburg - Schwyz">
+                </datalist>
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
+
+<script>
+    function validte(el) {
+        $.getJSON("/data/plz_schweiz.json", function (data) {
+            var options = data;
+            if (el.value == "") return;
+            /*for (var i = 0; i < options.length; i++) {
+                if(el.value == options[i].value)
+                console.log("y")
+                el.style.borderColor  = "green";
+                return;
+            }*/
+            var success = false;
+            options.forEach(element => {
+                if (el.value == element.plz + " - " + element.ort + " - " + element.kanton) success =
+                    true;
+            });
+            console.log(success)
+            if (success == true) return el.style.borderColor = "green";
+            el.value = ""
+            el.style.borderColor = "red";
+        });
+
+    }
+    $("form").submit(function (e) {
+        e.preventDefault();
+        $('.sub').css('display', 'none')
+        $.ajax({
+            url: '<%-pre%>/reg',
+            type: 'POST',
+            cache: false,
+            data: $('form').serializeArray(),
+            success: function (data) {
+                if (data.success == true) {
+                    window.location = `/success`;
+                } else {
+                    if(data.error == "pers"){
+                        console.log("pers")
+                    }
+                    if(data.error == "error"){
+                        console.log("error")
+
+}
+                    $('.sub').css('display', 'block')
+                    if (data.error == "addr") {
+                        $('.house_p').css('color', 'red')
+                        $('.house_p').css('font-size', '120%')
+                    }
+                }
+            },
+            error: function (jqXHR, textStatus, err) {
+                $('.error').css('display', 'block')
+            }
+        })
+    })
+</script>
