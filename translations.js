@@ -325,7 +325,7 @@ exports.text_18 = [{
         },
         {
             order: 20,
-            text: "Möchtest du dich wirklich für den 16.05.2022 abmelden?"
+            text: "Möchtest du dich wirklich für den 18.05.2022 abmelden?"
         },
         {
             order: 21,
@@ -407,7 +407,7 @@ exports.text_18 = [{
     },
     {
         order: 20,
-        text: "Do you really want to de-register for May 16, 2022?"
+        text: "Do you really want to de-register for May 18, 2022?"
     },
     {
         order: 21,
@@ -491,7 +491,7 @@ exports.text_18 = [{
         },
         {
             order: 20,
-            text: "Ви дійсно хочете скасувати підписку на 16 травня 2022 року?"
+            text: "Ви дійсно хочете скасувати підписку на 18 травня 2022 року?"
         },
         {
             order: 21,
