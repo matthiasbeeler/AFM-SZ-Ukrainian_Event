@@ -31,8 +31,6 @@ router.get('/form', function (req, res, next) {
 
 router.post('/reg', function (req, res, next) {
     try {
-
-
         var success = false
         all_plz.forEach(element => {
             if (req.body.house == element.plz + " - " + element.ort + " - " + element.kanton) success = true;
