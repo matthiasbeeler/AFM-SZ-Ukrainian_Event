@@ -1,8 +1,9 @@
 var express = require('express');
+const { db } = require('../db');
+const { all_plz } = require('../plz_schweiz');
+const { send } = require('../send_mail');
 const { text_18 } = require('../translations');
 var router = express.Router();
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { date_time: '18. Mai 2022 um 13.30 - 17.00 in Schwyz', pre: "18" });
@@ -19,7 +20,6 @@ router.get('/form', function(req, res, next) {
   });
 
 });
-
 
 router.post('/reg', function (req, res, next) {
   try {
@@ -44,6 +44,7 @@ router.post('/reg', function (req, res, next) {
               success: false,
               error: "error"
           })
+          send(req.body.email, req.body.lang, 18, req.body.last_name)
           if (!error) return res.json({
               success: true
           })

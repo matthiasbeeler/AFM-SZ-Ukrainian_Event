@@ -18,22 +18,28 @@ exports.send = function send_mail(mail, lang, num, last_name){
             from: process.env.mail_from_name, // Sender address
             to: mail, // List of recipients
             subject: text_16[0][lang][13].text,
-            text: `${text_16[0][lang][14].text+ " " +last_name} \n 
-                    ${text_16[0][lang][15].text}\n
-                    ${text_16[0][lang][16].text}\n
-                    ${text_16[0][lang][17].text}
-                    ${text_16[0][lang][18].text}\n`
+            text: `${text_16[0][lang][14].text+ " " +last_name}
+
+${text_16[0][lang][15].text}
+
+${text_16[0][lang][16].text}
+
+${text_16[0][lang][17].text}
+${text_16[0][lang][18].text}`
           };
     }else{
         var mailOptions = {
             from: process.env.mail_from_name, // Sender address
             to: mail, // List of recipients
             subject: text_18[0][lang][13].text,
-            text: `${text_18[0][lang][14].text+" " +last_name} \n 
-                    ${text_18[0][lang][15].text}\n
-                    ${text_18[0][lang][16].text}\n
-                    ${text_18[0][lang][17].text}
-                    ${text_18[0][lang][18].text}\n`
+            text: `${text_18[0][lang][14].text+" " +last_name}
+
+${text_18[0][lang][15].text}
+
+${text_18[0][lang][16].text}
+
+${text_18[0][lang][17].text}
+${text_18[0][lang][18].text}`
           };
     }
           smtpTransport.sendMail(mailOptions, function (error, response) {
