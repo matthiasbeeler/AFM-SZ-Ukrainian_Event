@@ -50,8 +50,13 @@ function generate(){
                 width: 30
             },
             {
-                header: 'Wohnort',
-                key: 'Wohnort',
+                header: 'Postleitzahl',
+                key: 'plz',
+                width: 30
+            },
+            {
+                header: 'Ort',
+                key: 'ort',
                 width: 30
             },
             {
