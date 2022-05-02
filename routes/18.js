@@ -4,7 +4,7 @@ const { all_plz } = require('../plz_schweiz');
 const { send } = require('../send_mail');
 const { text_18 } = require('../translations');
 var router = express.Router();
-/* GET home page. */
+
 router.get('/', function(req, res, next) {
   res.render('index', { date_time: '18. Mai 2022 um 13.30 - 17.00 in Schwyz', pre: "18" });
 });
@@ -38,13 +38,14 @@ router.post('/reg', function (req, res, next) {
           success: false,
           error: "pers"
       })
-      db.query("INSERT INTO einladung_18 (Nachname, Vorname, Personenanzahl, E_Mail_Adresse, Wohnort, Angemeldet_am) VALUES (?,?,?,?,?,?)", [req.body.last_name, req.body.first_name, req.body.people, req.body.email, req.body.house, timestamp], function (error, results, fields) {
-          if (error) console.log(error)
+      var addresse_split = req.body.house.split('-')
+        db.query("INSERT INTO einladung_18 (Nachname, Vorname, Personenanzahl, E_Mail_Adresse, plz, ort, Angemeldet_am) VALUES (?,?,?,?,?,?,?)", [req.body.last_name, req.body.first_name, req.body.people, req.body.email, addresse_split[0], addresse_split[1], timestamp], function (error, results, fields) {
+            if (error) console.log(error)
           if (error) return res.json({
               success: false,
               error: "error"
           })
-          send(req.body.email, req.body.lang, 18, req.body.last_name)
+          send(req.body.email, req.body.lang, 18, req.body.last_name, results.insertId)
           if (!error) return res.json({
               success: true
           })

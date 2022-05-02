@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var _16 = require('./routes/16');
 var _18 = require('./routes/18');
+var data = require('./routes/data');
 const { db } = require('./db');
 
 var app = express();
@@ -31,6 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/data', data);
 app.use('/16', _16);
 app.use('/18', _18);
 

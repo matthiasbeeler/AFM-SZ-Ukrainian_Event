@@ -1,0 +1,66 @@
+<html lang="en" class="theme-light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einladung zum Informations- und Austauschanlass</title>
+    <link rel="shortcut icon" href="https://www.sz.ch/public/upload/assets/394/favicon.ico?fp=1477047822554"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/main_12_17.css">
+    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <div class="content">
+            <div style="position: fixed; display: none; height: 100vh; width: 100vw; top: 0px; left: 0px; background: white;"
+                class="success_overlay">
+                    <img src="/assets/images/success_icon.svg" alt="Success icon" style="width: 70%; top: 50%; left: 50%;  height: 100%;">
+            </div>
+            <div class="header_image">
+                <img src="/assets/images/logo_kt_sz.png" alt="">
+            </div>
+            <div class="title">
+                <h1><%-text[20].text%></h1>
+                <h1 class="error" style="color: red;"></h1>
+
+            </div>
+            <form action="" method="post">
+
+                <input type="submit" class="delete big btn_nodata sub" value="<%-text[21].text%>" name="search">
+
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
+
+<script>
+    $("form").submit(function (e) {
+        e.preventDefault();
+        $('.sub').css('display', 'none')
+        $.ajax({
+            url: '/cancel',
+            type: 'POST',
+            cache: false,
+            data: {
+                token: "<%-btn_val%>"
+            },
+            success: function (data) {
+                if (data.success == true) {
+                    $('.success_overlay').css('display', 'block')
+                    setTimeout(() => {
+                        window.location = "https://www.sz.ch/afm"
+                    }, 2000);
+                } else {
+                    $('.error').html('Es gab ein Fehler')
+                }
+            },
+            error: function (jqXHR, textStatus, err) {
+                $('.error').css('display', 'block')
+            }
+        })
+    })
+</script>

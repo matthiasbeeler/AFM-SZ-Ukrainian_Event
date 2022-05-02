@@ -61,11 +61,23 @@ exports.text_16 = [{
         },
         {
             order: 17,
-            text: "Freundliche Grüsse und bis bald"
+            text: "Falls Sie kurzfristig verhindert sind, können Sie sich mit dem untenstehenden Link abmelden:"
         },
         {
             order: 18,
+            text: "Freundliche Grüsse und bis bald"
+        },
+        {
+            order: 19,
             text: "Amt für Migration Schwyz"
+        },
+        {
+            order: 20,
+            text: "Möchten Sie sich wirklich für den 16.05.2022 abmelden?"
+        },
+        {
+            order: 21,
+            text: "Abmelden"
         },
 
 
@@ -133,11 +145,23 @@ exports.text_16 = [{
     },
     {
         order: 17,
-        text: "Kind regards and see you soon"
+        text: "If you are unable to come, you can cancel using the link below:"
     },
     {
         order: 18,
+        text: "Kind regards and see you soon"
+    },
+    {
+        order: 19,
         text: "Amt für Migration Schwyz"
+    },
+    {
+        order: 20,
+        text: "Do you really want to de-register for May 16, 2022?"
+    },
+    {
+        order: 21,
+        text: "De-register"
     },
 
 
@@ -204,11 +228,23 @@ exports.text_16 = [{
         },
         {
             order: 17,
-            text: "З повагою та до скорої зустрічі"
+            text: "Якщо вам заборонено це зробити, ви можете скасувати підписку за посиланням нижче:"
         },
         {
             order: 18,
+            text: "З повагою та до скорої зустрічі"
+        },
+        {
+            order: 19,
             text: "Amt für Migration Schwyz"
+        },
+        {
+            order: 20,
+            text: "Ви дійсно хочете скасувати підписку на 16 травня 2022 року?"
+        },
+        {
+            order: 21,
+            text: "Зняти з реєстрації"
         },
     ]
 
@@ -277,11 +313,23 @@ exports.text_18 = [{
         },
         {
             order: 17,
-            text: "Freundliche Grüsse und bis bald"
+            text: "Falls Sie kurzfristig verhindert sind, können Sie sich mit dem untenstehenden Link abmelden:"
         },
         {
             order: 18,
+            text: "Freundliche Grüsse und bis bald"
+        },
+        {
+            order: 19,
             text: "Amt für Migration Schwyz"
+        },
+        {
+            order: 20,
+            text: "Möchtest du dich wirklich für den 16.05.2022 abmelden?"
+        },
+        {
+            order: 21,
+            text: "Abmelden"
         },
 
 
@@ -347,12 +395,25 @@ exports.text_18 = [{
     },
     {
         order: 17,
-        text: "Kind regards and see you soon"
+        text: "If you are unable to come, you can cancel using the link below:"
     },
     {
         order: 18,
+        text: "Kind regards and see you soon"
+    },
+    {
+        order: 19,
         text: "Amt für Migration Schwyz"
     },
+    {
+        order: 20,
+        text: "Do you really want to de-register for May 16, 2022?"
+    },
+    {
+        order: 21,
+        text: "De-register"
+    },
+
 
 
 ],
@@ -418,11 +479,23 @@ exports.text_18 = [{
         },
         {
             order: 17,
-            text: "З повагою та до скорої зустрічі"
+            text: "Якщо вам заборонено це зробити, ви можете скасувати підписку за посиланням нижче:"
         },
         {
             order: 18,
+            text: "З повагою та до скорої зустрічі"
+        },
+        {
+            order: 19,
             text: "Amt für Migration Schwyz"
+        },
+        {
+            order: 20,
+            text: "Ви дійсно хочете скасувати підписку на 16 травня 2022 року?"
+        },
+        {
+            order: 21,
+            text: "Зняти з реєстрації"
         },
     ]
 
