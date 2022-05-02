@@ -5,6 +5,7 @@ const {
 const {
     all_plz
 } = require('../plz_schweiz');
+const { send } = require('../send_mail');
 const {
     text_16
 } = require('../translations');
@@ -52,6 +53,7 @@ router.post('/reg', function (req, res, next) {
                 success: false,
                 error: "error"
             })
+            send(req.body.email, req.body.lang, 16, req.body.last_name)
             if (!error) return res.json({
                 success: true
             })
@@ -64,5 +66,7 @@ router.post('/reg', function (req, res, next) {
         })
     }
 })
+
+
 
 module.exports = router;

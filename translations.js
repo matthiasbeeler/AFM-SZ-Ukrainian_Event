@@ -32,8 +32,16 @@ exports.text_16 = [{
         text: "Anmelden"
     }, 
     { order: 10, text:"Bitte benutze das Lateinische Alphabet"},
-    { order: 11, text:"Vielen Dank für ihre Anmledung!"},
+    { order: 11, text:"Vielen Dank für Ihre Anmledung!"},
     { order: 12, text:"Als bestätigung, erhalten Sie bald eine bestätigungs E-Mail"},
+    {order: 13, text: "Anmeldung Informations- und Austauschanlass für Geflüchtete aus der Ukraine"},
+    {order: 14, text: "Guten Tag Herr/Frau"},
+    {order: 15, text: "Mit dieser E-Mail bestätigen wir Ihnen, dass Ihre Anmeldung erfolgreich war."},
+    {order: 16, text: "Der Anlass findet am Montag, am 16. Mai 2022, um 13.30 - 17.00, im Kultuer- und Kongresszentrum Einsiedeln ZWEI RABEN statt."},
+    {order: 17, text: "Freundliche Grüsse und bis bald"},
+    {order: 18, text: "Amt für Migration Schwyz"},
+
+
 
 
 ],
@@ -111,7 +119,7 @@ exports.text_18 = [{
         order: 9,
         text: "Anmelden"
     },     { order: 10, text:"Bitte benutze das Lateinische Alphabet"},
-    { order: 11, text:"Vielen Dank für ihre Anmledung!"},
+    { order: 11, text:"Vielen Dank für Ihre Anmledung!"},
     { order: 12, text:"Als bestätigung, erhalten Sie bald eine bestätigungs E-Mail"},
 
 ],

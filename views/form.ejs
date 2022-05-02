@@ -47,6 +47,7 @@
                 <input type="text" name="house" onChange="validte(this)" class="house" id=" "
                     placeholder="<%-text[5].text%>" required="" list="plz">
                 <p class="house_p"><%-text[7].text%></p>
+                <input type="text" name="lang" class="text lang" id=" " readonly style="display: none;"   required="">
 
                 <input type="submit" class="delete big btn_nodata sub" value="<%-text[9].text%>" name="search">
                 <datalist id="plz">
@@ -143,6 +144,7 @@
     const urlParams = new URLSearchParams(window.location.search);
   const lang_param = urlParams.get('lang');
     lang_url = "?lang="+lang_param
+    document.querySelector('.lang').setAttribute('value', lang_param);
     $("form").submit(function (e) {
         e.preventDefault();
         $('.sub').css('display', 'none')
