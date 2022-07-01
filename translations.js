@@ -65,11 +65,11 @@ exports.text_16 = [{
         },
         {
             order: 18,
-            text: "Freundliche Grüsse und bis bald"
+            text: "Freundliche Grüsse"
         },
         {
             order: 19,
-            text: "Amt für Migration Schwyz"
+            text: "NYV"
         },
         {
             order: 20,
@@ -149,11 +149,11 @@ exports.text_16 = [{
     },
     {
         order: 18,
-        text: "Kind regards and see you soon"
+        text: "Kind regards"
     },
     {
         order: 19,
-        text: "Amt für Migration Schwyz"
+        text: "NYV"
     },
     {
         order: 20,
@@ -236,7 +236,7 @@ exports.text_16 = [{
         },
         {
             order: 19,
-            text: "Amt für Migration Schwyz"
+            text: "NYV"
         },
         {
             order: 20,
@@ -317,11 +317,11 @@ exports.text_18 = [{
         },
         {
             order: 18,
-            text: "Freundliche Grüsse und bis bald"
+            text: "Freundliche Grüsse "
         },
         {
             order: 19,
-            text: "Amt für Migration Schwyz"
+            text: "NYV"
         },
         {
             order: 20,
@@ -399,11 +399,11 @@ exports.text_18 = [{
     },
     {
         order: 18,
-        text: "Kind regards and see you soon"
+        text: "Kind regards"
     },
     {
         order: 19,
-        text: "Amt für Migration Schwyz"
+        text: "NYV"
     },
     {
         order: 20,
@@ -487,7 +487,7 @@ exports.text_18 = [{
         },
         {
             order: 19,
-            text: "Amt für Migration Schwyz"
+            text: "NYV"
         },
         {
             order: 20,
